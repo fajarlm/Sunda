@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampung Adat Mahmud</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .blog-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #ffffff;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-20px) !important;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-card img {
+            max-height: 250px;
+            /* Adjust the value as needed */
+        }
+
+        .navbar-custom {
+            position: sticky;
+            top: 0;
+            height: 90vh;
+            overflow-y: auto;
+            background-color: #28a745;
+            border-radius: 10px;
+        }
+
+        .navbar-custom .card-body {
+            padding: 20px;
+        }
+
+        .navbar-custom a {
+            color: #ffffff !important;
+        }
+
+        .navbar-custom a:hover {
+            color: #d4edda !important;
+        }
+
+        .bg-custom {
+            background: rgb(11,156,0);
+            background: linear-gradient(180deg, rgba(11,156,0,1) 38%, rgba(13,177,0,1) 53%, rgba(255,255,255,1) 93%);
+            background-attachment: fixed;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <!-- Header Section -->
+    <header class="bg-custom text-white py-5 text-center" data-aos="fade-down">
+        <div class="container">
+            <h1 class="display-4 font-weight-bold">Kampung Adat Mahmud</h1>
+            <p class="lead">Mengenal Sejarah, Budaya, dan Keunikan Kampung Mahmud</p>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Main Content (Left Side) -->
+            <div class="col-md-9">
+                <!-- Sejarah Section -->
+                <div class="blog-card card mb-4" data-aos="fade-right">
+                    <div class="card-body">
+                        <h2 class="card-title h4" id="sajarah">Sejarah Singkat Kampung Adat</h2>
+                        <div class="d-flex">
+                            <div class="card-text">
+                                <p class="card-text">
+                                    Numutkeun masarakatna, ieu kampung téh diwangun ku <strong>Sembah Éyang Abdul
+                                        Manaf</strong>,nu mangrupa turunan ti wali Cirebon, <strong>Syarif
+                                        Hidayatullah</strong>. Ieu kampung diwangun abad ka 15 Maséhi.
+                                </p>
+                                <p class="card-text">
+                                    Dimimitian ku Éyang Abdul Manaf nu indit ka <strong>Mekah</strong> ninggalkeun
+                                    lemburna tur dumuk di Mekah dina waktu nu kaitung lilana.[1] Hiji mangsa Éyang Abdul
+                                    Manaf ngarasa hayang balik deui ka lemburna, saméméh indit ninggalkeun Mekah,
+                                    anjeunna ngadu’a di hiji tempat nu dingaranan <strong>Gubah Mahmud</strong>. deuket
+                                    <strong>Masjidil Haram</strong>
+                                </p>
+                                <p class="card-text">
+                                    Dina du’ana anjeunna meredih sangkan bisa balik deui ka lembur nu teu kacicingan ku
+                                    penjajah.[1] Sanggeus nepi di lemburna, anjeunna néangan tempat luyu jeung pituduh
+                                    nu aya di Gubah Mahmud tug nepi ka manggih hiji tempat nyaéta di daérah walungan
+                                    Citarum.
+                                </p>
+                            </div>
+                            <img src="/Sunda/download.jpeg" alt="Sejarah Kampung Mahmud"
+                                class="img-fluid rounded mb-4 ">
+                        </div>
+                        <p class="card-text">
+                            Sanggeus manggih éta tempat, anjeunna ngawangun hiji kampung tina sakeupeul taneuh nu dibawa
+                            ti Gubah Mahmud sarta dibéré ngaran kampung Mahmud luyu jeung asal taneuh nu dipaké
+                            ngawangunna.[1] Salian ti éta, harti Mahmud di dinya dipercaya miboga harti kampung nu
+                            dipuji tur loba hal nu dipantrangna.[2] Sangkan ieu kampung teu kapanggih ku penjajah,
+                            anjeunna nempatkeun 40 jin pikeun ngajaga ieu kampung.[2] Tempat munggaran nu dipaké
+                            neundeun éta taneuh dingaranan <strong>Masjid Paimbaran</strong>.
+                        </p>
+                        <a href="https://su.wikipedia.org/wiki/Kampung_Mahmud" target="_blank"
+                            class="btn btn-success">Baca Selengkapnya
+                            →</a>
+                    </div>
+                </div>
+
+                <!-- Lokasi Section -->
+                <div class="blog-card card mb-4" data-aos="fade-left">
+                    <div class="card-body">
+                        <h2 class="card-title h4" id="lokasi">Lokasi Kampung Adat</h2>
+                        <p class="card-text">
+                            Kampung Mahmud terletak di Kabupaten Bandung, tepatnya di RW 4 Desa Mekar Rahayu, Kecamatan
+                            Margaasih, Kabupaten Bandung Selatan.
+                        </p>
+                        <p class="card-text">
+                            Kampung ini berbatasan dengan:
+                        </p>
+                        <div class="d-flex">
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item">Sebelah utara: Desa Rahayu dan Desa Cigondéwa</li>
+                                <li class="list-group-item">Sebelah selatan: Desa Pameuntasan dan Desa Daraulin</li>
+                                <li class="list-group-item">Sebelah barat: Desa Nanjung</li>
+                                <li class="list-group-item">Sebelah timur: Desa Margahayu</li>
+                            </ul>
+
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.938123456789!2d110.123456789!3d-7.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e123456789abcdef%3A0x123456789abcdef!2sKampung%20Adat%20Mahmud!5e0!3m2!1sen!2sid!4v1611234567890!5m2!1sen!2sid"
+                                width="450" height="350" style="border:0;" class="pb-2" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <a href="https://su.wikipedia.org/wiki/Kampung_Mahmud" target="_blank"
+                            class="btn btn-success">Baca Selengkapnya
+                            →</a>
+                    </div>
+                </div>
+
+                <!-- Struktur Organisasi Section -->
+                <div class="blog-card card mb-4" data-aos="fade-right">
+                    <div class="card-body">
+                        <h2 class="card-title h4" id="struktur">Struktur Organisasi Kampung Adat </h2>
+                        <p class="card-text">
+                            Pemimpin tradisional di Kampung Mahmud disebut <strong>"Pupuhu"</strong> atau
+                            <strong>"Kuncen"</strong>. Pupuhu adalah ketua adat, sedangkan Kuncen bertugas menjaga situs
+                            dan tradisi leluhur.
+                        </p>
+                        <img src="https://via.placeholder.com/800x400" alt="Struktur Organisasi Kampung Mahmud"
+                            class="img-fluid rounded mb-3">
+                        <a href="https://su.wikipedia.org/wiki/Kampung_Mahmud" target="_blank"
+                            class="btn btn-success">Baca Selengkapnya
+                            →</a>
+                    </div>
+                </div>
+                <div class="blog-card card mb-4" data-aos="fade-right">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Ngaran Imah </h2>
+                        <div class="d-flex">
+                            <img src="./download (1).jpeg" alt="imah dikampung Mahmud"
+                                class="img-fluid rounded mb-3 px-3">
+                            <p class="card-text">
+                                sakabéh imah anu aya di lingkungan masarakat kampung Mahmud mangrupa imah panggung
+                            </p>
+                        </div>
+                        <a href="https://su.wikipedia.org/wiki/Kampung_Mahmud" target="_blank"
+                            class="btn btn-success">Baca
+                            Selengkapnya
+                            →</a>
+                    </div>
+                </div>
+
+                <!-- Upacara Adat Section -->
+                <div class="blog-card card mb-4" data-aos="fade-left">
+                    <div class="card-body">
+                        <h2 class="card-title h4" id="adat">Upacara Adat</h2>
+                        <p class="card-text">
+                            Beberapa upacara adat yang dilakukan di Kampung Mahmud antara lain:
+                        </p>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item"><strong>Ngalamar</strong> : Upacara lamaran.</li>
+                            <li class="list-group-item"><strong>Seuseurahan</strong> : Upacara pernikahan.</li>
+                            <li class="list-group-item"><strong>Ngeuyeuk seureuh</strong> : Upacara pra-pernikahan.</li>
+                            <li class="list-group-item"><strong>Nincak endog</strong> : Upacara menginjak telur.</li>
+                            <li class="list-group-item"><strong>Sawer</strong> : Upacara saweran.</li>
+                        </ul>
+                        <a href="https://su.wikipedia.org/wiki/Kampung_Mahmud" target="_blank"
+                            class="btn btn-success">Baca Selengkapnya
+                            →</a>
+                    </div>
+                </div>
+
+                <!-- Fakta Unik Section -->
+                <div class="blog-card card mb-4" data-aos="fade-right">
+                    <div class="card-body">
+                        <h2 class="card-title h4" id="agama">Agama atawa Kapercayaan anu di anut</h2>
+                        <p class="card-text">
+                            Ngeunaan tatacara dina kahirupan masarakat Kampung Mahmud, boh anu aya patalina jeung adat
+                            istiadat atawa jeung kayakinan kana agama, teu loba nu kapanggih dina hal anu béda jeung
+                            masarakat séjén.baheulana aya tokoh agama anu kakoncara.
+                        <div class="d-flex">
+                        <p class="card-text">
+                            Malah nepi ayeuna makamna loba kadatangan jalma anu baris ziarah, boh masarakat sabudeur
+                            atawa masarakat luar. Sistem anu hirup di masarakat sabudeur nyaéta ajaran agama Islam.
+                            Norma-norma kaislaman anu diangkat sarta dijadikeun tetekon ku masarakat Kampung Mahmud,
+                            katitén tina kahirupan sapopoéna.
+                        </p>
+                        <img src="ag.jpeg" alt="Fakta Unik Kampung Mahmud" class="img-fluid rounded mb-3">
+                    </div>
+                        <a href="https://su.wikipedia.org/wiki/Kampung_Mahmud" target="_blank"
+                            class="btn btn-success">Baca Selengkapnya
+                            →</a>
+                    </div>
+                </div>
+                <div class="blog-card card mb-4" data-aos="fade-right">
+                    <div class="card-body">
+                        <h2 class="card-title h4" id="fakta">Fakta Unik Kampung Adat</h2>
+                        <p class="card-text "><i>
+                            >Salah satu fakta unik dari Kampung Mahmud adalah ketika sungai Citarum banjir besar, kampung
+                            ini tidak terkena banjir meskipun posisinya seharusnya rawan banjir.
+                        </i></p>
+                        <a href="https://su.wikipedia.org/wiki/Kampung_Mahmud" target="_blank"
+                            class="btn btn-success">Baca Selengkapnya
+                            →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navbar (Right Side) -->
+            <div class="col-md-3 ">
+                <div class="navbar-custom card" data-aos="fade-left">
+                    <div class="card-body">
+                        <h3 class="h5 card-title">Menu Navigasi</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#sajarah" class="text-white">Sejarah</a></li>
+                            <li><a href="#lokasi" class="text-white">Lokasi</a></li>
+                            <li><a href="#agama" class="text-white">Agama</a></li>
+                            <li><a href="#struktur" class="text-white">Struktur Organisasi</a></li>
+                            <li><a href="#adat" class="text-white">Upacara Adat</a></li>
+                            <li><a href="#fakta" class="text-white">Fakta Unik</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-success text-white py-4 h-1" data-aos="fade-up">
+        <div class="container text-center">
+            <p>&copy; 2025 Kampung Adat Mahmud. | Fajar Kusuma.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.  5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+
+</html>
