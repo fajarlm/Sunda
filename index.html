@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,21 +26,21 @@
 
         .blog-card:hover {
             transform: translateY(-20px) !important;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 15px 20px -3px rgba(0, 0, 0, 0.15), 0 6px 8px -2px rgba(0, 0, 0, 0.1);
         }
 
         .blog-card img {
             max-height: 250px;
-            /* Adjust the value as needed */
+            object-fit: cover;
+            width: 100%;
         }
 
         .navbar-custom {
             position: sticky;
-            top: 0;
-            height: 90vh;
-            overflow-y: auto;
+            top: 20px;
             background-color: #28a745;
             border-radius: 10px;
+            transition: all 0.3s ease;
         }
 
         .navbar-custom .card-body {
@@ -50,30 +49,142 @@
 
         .navbar-custom a {
             color: #ffffff !important;
+            padding: 8px 0;
+            display: block;
+            transition: all 0.3s ease;
         }
 
         .navbar-custom a:hover {
             color: #d4edda !important;
+            transform: translateX(10px);
         }
 
         .bg-custom {
-            background: rgb(11,156,0);
             background: linear-gradient(180deg, rgba(11,156,0,1) 38%, rgba(13,177,0,1) 53%, rgba(255,255,255,1) 93%);
             background-attachment: fixed;
         }
 
-        footer {
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #28a745;
+            z-index: 1000;
+            padding: 1rem;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: #28a745;
+            padding: 1rem;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-nav-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-size: 1.25rem;
+        }
+
+        .hamburger {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            margin-left: 8px;
+            line-height: 1;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-nav {
+                display: block;
+            }
+
+            .navbar-custom {
+                display: none;
+            }
+
+            .blog-card {
+                margin-bottom: 2rem;
+            }
+
+            .d-flex {
+                flex-direction: column;
+            }
+
+            .d-flex img {
+                margin-top: 1rem;
+                max-width: 100%;
+            }
+
+            iframe {
+                width: 100% !important;
+                height: 300px !important;
+            }
+        }
+
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #28a745, transparent);
+            margin: 2rem 0;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 20px;
-            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
         }
     </style>
 </head>
-
 <body class="bg-light">
-    <!-- Header Section -->
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-title">
+            Menu <button class="hamburger" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <ul class="list-unstyled">
+            <li><a href="#sajarah" class="text-white" onclick="toggleMenu()">Sejarah</a></li>
+            <li><a href="#lokasi" class="text-white" onclick="toggleMenu()">Lokasi</a></li>
+            <li><a href="#agama" class="text-white" onclick="toggleMenu()">Agama</a></li>
+            <li><a href="#struktur" class="text-white" onclick="toggleMenu()">Struktur Organisasi</a></li>
+            <li><a href="#adat" class="text-white" onclick="toggleMenu()">Upacara Adat</a></li>
+            <li><a href="#fakta" class="text-white" onclick="toggleMenu()">Fakta Unik</a></li>
+        </ul>
+    </div>
+
     <header class="bg-custom text-white py-5 text-center" data-aos="fade-down">
         <div class="container">
             <h1 class="display-4 font-weight-bold">Kampung Adat Mahmud</h1>
@@ -167,8 +278,6 @@
                             <strong>"Kuncen"</strong>. Pupuhu adalah ketua adat, sedangkan Kuncen bertugas menjaga situs
                             dan tradisi leluhur.
                         </p>
-                        <img src="https://via.placeholder.com/800x400" alt="Struktur Organisasi Kampung Mahmud"
-                            class="img-fluid rounded mb-3">
                         <a href="https://su.wikipedia.org/wiki/Kampung_Mahmud" target="_blank"
                             class="btn btn-success">Baca Selengkapnya
                             →</a>
@@ -273,18 +382,66 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.  5.1.slim.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
+        // Initialize AOS
         AOS.init({
             duration: 1000,
             once: true
         });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Scroll to top functionality
+        const scrollToTop = document.querySelector('.scroll-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTop.classList.add('visible');
+            } else {
+                scrollToTop.classList.remove('visible');
+            }
+        });
+
+        scrollToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target) && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                const offset = 80; // Adjust for fixed header
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
-
 </html>
